@@ -1,4 +1,5 @@
  $(document).ready(function(){
+ 	/* funcion sirve para una vez escrito el mensaje en el input , cree el mensaje y se muestra abajo con check y el basurero*/
  	$('#items').click(function(){
         var mensaje = $('input[name=tarea]').val();
          	if(mensaje){
@@ -8,7 +9,7 @@
 
 
         });
-       
+    /*funcion sirve para remover al hacer click en el basurero*/   
     $(document).on('click', '.remove', function(){
 		
 		$(this).parent().remove();
@@ -16,7 +17,7 @@
 	});
 
 
-
+    /*funcion sirve para que cuando se hace enter se guarde la tarea*/
        $("input[name=tarea]").keyup(function(event){
           if(event.keyCode == 13){
             $("#items").click();
@@ -24,44 +25,3 @@
       });
 
  });
-
-
-
-/*
-if(item) 
-		{
-			$('#list-items').append("<li><input class='checkbox' type='checkbox'/>" + item + "<a class='remove'>x</a><hr></li>");
-			
-			localStorage.setItem('listItems', $('#list-items').html());
-			
-			$('#todo-list-item').val("");
-		}
-		
-	});
-
-/*
- 		$('#tarea').keyup(function(e){
- 		e.preventDefault();
-    	if(e.keyCode == 13) {
-        	alert('Has presionado ENTER');
-    		}
-    	}
-
-    	$('input[name=ListItem]').val();
-                 $('ol').append('<li>' + toAdd + '</li>');
-            });
-       
-
-  	var mensaje= $('#tarea').val();
-		if(mensaje ==""){
-			alert("Debes escribir una nombre");
-		}else{
-			$('#tarea').val();
-			$('ol').append('<li>' + mensaje + '</li>');
-		}
-	});
-});
-
-*/
-
-
